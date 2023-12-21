@@ -5,9 +5,41 @@
     <title>D&D 5e Character Sheet</title>
     <meta name="author" content="Nils Liebreich">
 
-    <meta name="viewport" content="width=device-width, user-scalable=false">
+    <style>
+        body {
+            width: min(device-width, device-height);
+            border: 2px solid red;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+        }
+
+        div {
+            margin: 2px;
+            padding: 2px;
+            border: 2px solid blue;
+        }
+
+        .page {
+            border: 2px dashed black;
+            aspect-ratio: 213/279;
+            page-break-after: always;
+            margin: 0;
+            width: min(100vh, 100vw);
+        }
+    </style>
 </head>
 <body>
+    <div class="page">
+    <div>
     <h1>This is a Test Message</h1>
+    </div>
+    </div>
+    <div class="page">
+    <div>
+        <div><p>Test Paragraph</p></div>
+    </div>
+    <div><p>Another Test Paragraph</p></div>
+    </div>
 </body>
 </html>
