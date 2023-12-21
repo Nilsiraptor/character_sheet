@@ -8,23 +8,27 @@
     <style>
         body {
             width: min(device-width, device-height);
+            background-color: midnightblue;
             border: 2px solid red;
             margin: 0;
             padding: 0;
-            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         div {
             margin: 2px;
             padding: 2px;
             border: 2px solid blue;
+            background-color: whitesmoke;
         }
 
         .page {
             border: 2px dashed black;
             aspect-ratio: 213/279;
             page-break-after: always;
-            margin: 0;
+            margin: min(1vh, 1vw);
             width: min(100vh, 100vw);
         }
     </style>
