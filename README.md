@@ -1,2 +1,2 @@
-# character_sheet
-A character sheet for D&amp;D 5e
+# Character Sheet
+A character sheet for D&D 5e
