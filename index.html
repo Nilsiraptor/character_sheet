@@ -6,11 +6,12 @@
     <meta name="author" content="Nils Liebreich">
     <link rel="icon" href="favicon.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Teko&display=swap" rel="stylesheet">
+
     <style>
         body {
-            /* For Development only */
-            border: 2px solid red;
-
             /* Final Style */
             background-color: midnightblue;
             margin: 0;
@@ -20,11 +21,9 @@
             align-items: center;
         }
 
-        div {
+        div:hover {
             /* For Development only */
-            margin: 2px;
-            padding: 2px;
-            border: 2px solid blue;
+            outline: 2px solid red;
         }
 
         .page {
@@ -42,6 +41,35 @@
             justify-content: stretch;
         }
 
+        .flex-h {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-v {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input, select {
+            border: 0;
+            border-bottom: 1px solid gray;
+            outline: none;
+            font-family: Caveat;
+            font-size: 16pt;
+        }
+
+        #basic_information {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            font-family: Teko;
+            background-color: lightgray;
+            border-radius: 2pt;
+            font-size: 16pt;
+            margin: 1pt;
+        }
+
         @media print {
             body {
                 background-color: transparent;
@@ -57,15 +85,34 @@
 </head>
 <body>
     <div class="page">
-    <div>
-    <h1>This is a Test Message</h1>
-    </div>
+        <div class="flex-v">
+            <div id="basic_information">
+                <div id="character_name">
+                    <label for="character_name_input">Character Name:</label>
+                    <input id="character_name_input">
+                </div>
+                <div id="character_class">
+                    <label for="character_class_select">Class:</label>
+                    <select id="character-class-select">
+                        <option value=""></option>
+                        <option value="human">Human</option>
+                        <option value="elf">Elf</option>
+                        <option value="dwarf">Dwarf</option>
+                        <option value="halfling">Halfling</option>
+                        <option value="gnome">Gnome</option>
+                        <option value="dragonborn">Dragonborn</option>
+                        <option value="tiefling">Tiefling</option>
+                        <option value="half-orc">Half-Orc</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="page">
-    <div>
-        <div><p>Test Paragraph</p></div>
-    </div>
-    <div><p>Another Test Paragraph</p></div>
+        <div>
+            <div><p>Test Paragraph</p></div>
+        </div>
+        <div><p>Another Test Paragraph</p></div>
     </div>
 </body>
 </html>
