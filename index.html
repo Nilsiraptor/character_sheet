@@ -8,8 +8,11 @@
 
     <style>
         body {
-            background-color: midnightblue;
+            /* For Development only */
             border: 2px solid red;
+
+            /* Final Style */
+            background-color: midnightblue;
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,18 +21,25 @@
         }
 
         div {
+            /* For Development only */
             margin: 2px;
             padding: 2px;
             border: 2px solid blue;
         }
 
         .page {
+            /* For Development only */
             border: 2px dashed black;
+
+            /* Final Style */
             background-color: whitesmoke;
             aspect-ratio: 210 / 297;
-            page-break-after: always;
             margin: min(1vh, 1vw);
             width: min(98vh, 98vw);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: stretch;
         }
 
         @media print {
@@ -38,6 +48,7 @@
             }
 
             .page {
+                page-break-after: always;
                 margin: 0;
                 background-color: transparent;
             }
