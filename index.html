@@ -26,10 +26,20 @@
 
         .page {
             border: 2px dashed black;
-            aspect-ratio: 210/297;
+            aspect-ratio: 210 / 297;
             page-break-after: always;
             margin: min(1vh, 1vw);
             width: min(98vh, 98vw);
+        }
+
+        @media print {
+            body {
+                background-color: transparent;
+            }
+
+            .page {
+                margin: 0;
+            }
         }
     </style>
 </head>
